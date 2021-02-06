@@ -1,4 +1,5 @@
 /* Functions */
+//---------1
 const playAudio = (e) => {
    // get the proper audio
    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
@@ -17,7 +18,7 @@ const playAudio = (e) => {
    key.classList.add("playing");
 };
 
-//--------
+//--------2
 const removeTransition =function (e) {
    if (e.propertyName !== "transform") return; // Skip it if it's not a transform
 
@@ -25,7 +26,7 @@ const removeTransition =function (e) {
    this.classList.remove("playing");
 };
 
-//-------
+//-------3
 const playAudioByMouse = function (e) {
    const keyCode = this.getAttribute("data-key");
    const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
@@ -34,6 +35,7 @@ const playAudioByMouse = function (e) {
    const key = document.querySelector(`.key[data-key="${keyCode}"]`);
    key.classList.add("playing");
 }
+/*End Functions*/
 
 /* Add event when the key is transitioned (scale change) */
 const keys = document.querySelectorAll('.key');
